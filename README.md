@@ -1,0 +1,2 @@
+# Thought
+Representing Your norms
