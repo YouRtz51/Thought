@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+window {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 455;
+    transition: 0.3s all ease;
+}
+
+header.sticky {
+    position: absolute;
+    width: 100%;
+    z-index: 455;
+    background-color: rgba(51, 51, 51, 0.192);
+}
+
+
+/* header nav .logo {
+    font-size: 2.5em;
+    transition: 0.3s ease all;
+    font-weight: 600;
+    color: rgb(18, 112, 112);
+    cursor: pointer;
+} */
+
+header nav .logo a {
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    font-weight: 600;
+    color: rgb(18, 112, 112);
+    cursor: pointer;
+}
+
+header nav .logo span {
+    font-size: 1.2em;
+    transition: 0.3s ease all;
+    font-weight: 600;
+    color: rgb(255, 243, 70);
+    text-shadow: #111 0px 0px 2px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    margin-left: 12px;
+    transition: 0.3s ease all;
+}
+
+header nav ul li a:hover {
+    padding: 6px;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    background: url(https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_437743.jpg) no-repeat right;
+    background-size: cover;
+}
+
+.wrapper .row {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .row .infobx {
+    padding: 6px;
+}
+
+.wrapper .row .infobx h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: rgb(62, 62, 155);
+}
+
+.wrapper .row .infobx h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.wrapper .row .infobx p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.wrapper .row .infobx a {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgb(210, 255, 240);
+    padding: 5px;
+    transition: 0.3s all ease;
+}
+
+.wrapper .row .infobx a:hover {
+    background: none;
+    border: 2px solid rgb(91, 91, 255);
+    font-size: 1.4em;
+}
+
+.wrapper .card {
+    background-color: rgba(238, 238, 238, 0.397);
+}
+
+.wrapper .card form {
+    width: 100%;
+    padding: 12px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.wrapper .card form a {
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid grey;
+    background-color: rgba(210, 255, 240, 0.445);
+    padding: 5px;
+    transition: 0.3s all ease;
+}
+
+.wrapper .card form a:hover {
+    background: none;
+    border: 2px solid rgb(91, 91, 255);
+    color: rgb(91, 91, 255);
+}
+
+.wrapper .card form input[type="text"],
+.wrapper .card form input[type="email"],
+textarea {
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.297);
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+header nav .navmenu {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    /* * {
+        border: 1px solid red;
+    } */
+    .wrapper.active .row {
+        display: none;
+    }
+    header nav ul {
+        display: none;
+    }
+    header nav ul.active {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+    }
+    header nav .navmenu {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 998;
+        height: 40px;
+        width: 40px;
+        background: url(assets/nav.png);
+        background-size: cover;
+    }
+    .wrapper .row {
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+    }
+    .wrapper .row .col {
+        display: flex;
+        align-items: center;
+    }
+    .wrapper .row .col1 {
+        align-items: flex-end;
+    }
+    .wrapper .row .infobx h2 {
+        font-size: 2.2em;
+        font-weight: 400;
+        color: rgb(62, 62, 155);
+    }
+    .wrapper .row .infobx h3 {
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+    .wrapper .row .infobx p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .wrapper .card form input[type="text"],
+    .wrapper .card form input[type="email"],
+    form span {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    form textarea {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .wrapper .card form a {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    header nav .logo a {
+        font-size: 1em;
+    }
+    .wrapper .row .infobx a {
+        font-size: 1.25em;
+        font-weight: 500;
+        padding: 2px;
+    }
+    .wrapper .row .infobx a:hover {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width:568px) {
+    /* * {
+        border: 1px solid red;
+    } */
+    header nav .navmenu {
+        display: block;
+        position: absolute;
+        right: 5px;
+        z-index: 998;
+        height: 26px;
+        width: 26px;
+        background: url(assets/nav.png);
+        background-size: cover;
+    }
+    .wrapper .row .infobx h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: rgb(62, 62, 155);
+    }
+    .wrapper .row .infobx h3 {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+    .wrapper .row .infobx p {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .wrapper .card form input[type="text"],
+    .wrapper .card form input[type="email"],
+    form span {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    form textarea {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .wrapper .card form a {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    header nav .logo a {
+        font-size: 0.8em;
+    }
+    .wrapper .row .infobx a {
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 2px;
+    }
+    .wrapper .row .infobx a:hover {
+        font-size: 1.2em;
+    }
+}
